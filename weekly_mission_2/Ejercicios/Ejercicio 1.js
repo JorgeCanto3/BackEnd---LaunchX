@@ -7,3 +7,5 @@ const user = {
     User_Join: "User join June of 2017",
     NumberTwitts: 99
 } 
+const tendrigtopic ={}
+const hashtag ={}
