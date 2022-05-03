@@ -113,5 +113,4 @@ console.log("Tendencias actuales:  " + user.getTrendsandHAshtags());
 console.log(user.getLikesandRt());
 console.log(user.getLocation());
 
-
-//Facebook
+//Facebook//
