@@ -152,9 +152,35 @@ console.log("His last post " + Post.getLikes() + "and" + Post.gettime())
 
 //Uber
 const profile = {
-    
+    Name: "Jorge Canto",
+    UbReward: 4800 + "pts",
+    UberType: "Blue",
+    PaymentMethod: "Cash",
+    Rating: 4.6,
+
+    GetUName: function () {
+        return `${this.Name} asked for a trip`
+    },
+    GetRate: function () {
+        return ` his rate is of ${this.Rating}`
+    }
 }
 
 const travel = {
-    
+    Place: "Acuario Inbursa",
+    Schedul: "Thursday at 10:00 am",
+    Amount: "$200 pesos",
+    TimeofTravel: "1hr or less",
+
+    GetTime: function () {
+        return `time of the travel will be ${this.TimeofTravel}`
+    },
+    GetPlace: function () {
+        return ` to ${this.Place}`
+    },
+    GetAmount: function () {
+        return ` the cost is of ${this.Amount}`
+    }
 }
+
+console.log(profile.GetUName() + travel.GetPlace() + profile.GetRate() + " and the " + travel.GetTime() + travel.GetAmount()) 
