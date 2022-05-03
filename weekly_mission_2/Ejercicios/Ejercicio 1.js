@@ -1,8 +1,62 @@
 //Github
+const repo = {
+    name: "LaunchX",
+    author: "JorgeCanto3",
+    language: "JavaScript",
+    numberOfCommits: 100,
+    stars: 199,
+    forks: 299,
+    issues_open: 10,
+    issues_close: 10,
+    getTotalIssues: function () {
+        return this.issues_open + this.issues_close
+    },
+    getGeneralInfo: function () {
+        return `This repository ${this.name} was created by ${this.author}`
+    }
+}
 
+console.log("Nombre del repo:" + repo.name)
+console.log("Issues totales: " + repo.getTotalIssues())
+console.log(repo.getGeneralInfo())
 
+const issue = {
+    title: "Ejercicio 1 Github",
+    repoNameAssociated: "CarloGilmar",
+    Status: "Open Issue",
+    NumberOComments: 45,
+    Labels: "Issue",
+    Author: "JorgeCanto3",
+    DateCreated: "02 of April of 2022",
+    LastUpdated: "02 of May of 2022",
 
+    getTitleAndAuthor: function () {
+        return this.title + this.repoNameAssociated
+    },
+    getGeneralInfo: function () {
+        return `This issue ${this.title} was created on the repo associated with ${this.repoNameAssociated}`
+    }
+}
 
+console.log(issue.getGeneralInfo())
+
+const PullRequest = {
+    title: "Pull Request Node.js",
+    BranchName: "GitHub Excercise 1",
+    DateCreated: "03 of May of Abril",
+    Status: "Closed",
+    repoNameAssociated: "JorgeCanto3",
+
+    getStatus: function () {
+        return this.Status
+    },
+
+    getTitleAndAuthor: function () {
+        return `${this.repoNameAssociated} create a Pullrquest and named ${this.title}  `
+    }
+}
+
+console.log(PullRequest.getTitleAndAuthor() + "and the status is " + PullRequest.getStatus())
 //Twitter
 
 const user = {
