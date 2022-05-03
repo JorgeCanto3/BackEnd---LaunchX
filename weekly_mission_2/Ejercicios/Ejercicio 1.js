@@ -149,3 +149,12 @@ const Post = {
 
 console.log("This profile" + Fuser.getName() + "and " + Fuser.getLocation())
 console.log("His last post " + Post.getLikes() + "and" + Post.gettime())
+
+//Uber
+const profile = {
+    
+}
+
+const travel = {
+    
+}
