@@ -114,3 +114,38 @@ console.log(user.getLikesandRt());
 console.log(user.getLocation());
 
 //Facebook//
+const Fuser = {
+    FullName: "Jorge Luis Santiago Canto",
+    UserName: "Jorge Canto",
+    Friends: 250,
+    Location: "Lives in: Ciudad de Mexico",
+    Join: "Join: December of 2010",
+    LStatus: "Single",
+    Studies: "Studies at UAM Xochimilco",
+    ProfileTabs: ["Posts", "Information", "Friends", "Photos"],
+
+    getName: function () {
+        return ` User Name is  ${this.UserName} `
+    },
+    getLocation: function () {
+        return `He ${this.Location}`
+    }
+}
+
+const Post = {
+    TextPost: "A good meme",
+    Time: "10 hrs ago",
+    WhoSee: "OnlyFriends",
+    Likes: 10,
+    Share: 5,
+
+    getLikes: function () {
+        return `has this number of likes: ${this.Location} `
+    },
+    gettime: function () {
+        return `was publish ${this.Time}`
+    }
+}
+
+console.log("This profile" + Fuser.getName() + "and " + Fuser.getLocation())
+console.log("His last post " + Post.getLikes() + "and" + Post.gettime())
