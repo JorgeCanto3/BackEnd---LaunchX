@@ -1,19 +1,11 @@
 {
-  "name": "backend---launchx",
+  "name": "proyectos_js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "ProyectoJs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JorgeCanto3/BackEnd---LaunchX.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JorgeCanto3/BackEnd---LaunchX/issues"
-  },
-  "homepage": "https://github.com/JorgeCanto3/BackEnd---LaunchX#readme"
+  "author": "JorgeCanto3",
+  "license": "ISC"
 }
