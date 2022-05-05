@@ -4,7 +4,7 @@
   "description": "Diseño de Software con TDD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install --save-dev jest"
   },
   "author": "JorgeCanto3",
   "license": "ISC",
