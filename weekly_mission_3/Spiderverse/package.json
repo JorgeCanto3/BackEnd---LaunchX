@@ -4,11 +4,14 @@
   "description": "Diseño de Software con TDD",
   "main": "index.js",
   "scripts": {
-    "test": "npm install --save-dev jest"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest"
   },
   "author": "JorgeCanto3",
   "license": "ISC",
   "devDependencies": {
     "jest": "^28.0.3"
+  },
+  "dependencies": {
+    "package.json": "^2.0.1"
   }
 }
