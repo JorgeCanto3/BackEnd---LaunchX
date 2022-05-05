@@ -1,3 +1,5 @@
+const SuperHero = require('./../App/SuperHero')
+
 describe("Prueba Dummy - SH", () => {
     test("Prueba Dummy 1 - SH", () => {
         //Usar codigo como deseamos utilizar
