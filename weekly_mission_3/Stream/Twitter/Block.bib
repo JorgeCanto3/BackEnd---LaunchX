@@ -1,0 +1,71 @@
+GIT - GITHUB
+    Comandos para saber el estado, ubicacion, nuestros commits, mandar commits, etc:
+        git status: Para saber si estamos en un repo
+
+        git init: Creamos un repo de git
+        *Debemos agregar los commits seguid para tener un seguimiento de las versiones*
+
+
+
+        git remote add: Agregamos una URL de un repo de alguna plataforma asi "origin (URL)"
+        git remote -v: Donde esta el repo
+
+        git push (Push sirve para "Empujar" los cambios hacia nuestro repo) origin (Cual es el origen de nuestro repo) master (Branch principal)
+        git push origin master  
+
+        Tanto el repo de Git como el de Github tienen que esta actulizado con lo cambios que hagamos
+        Para ello cuando hacemos cambios en Github podemos traerlos a nostros con:
+        Git pull "origin master"
+
+        *Hay que entender como usar lo comandos de Git, no usar por usar"
+
+        *Avanzado* git push origin master --force: Mandamos los cambios de nuestro repo local sin importar los que haya en el global
+
+Creacion de un Proyecto en JS
+    1. Para cualquier proyecto de Js - Versionarlo con Git
+    2. Ejecutar npm init -npm init: nos crea el package.json
+    3. Provicionar ambiente creando: 
+        Test
+            Models
+                User.test.js    
+        App
+            Models
+                User.js
+    4. Agregar Jest como dependencia para nuestros Test
+        4.1 Comando para instalar Jest:
+                npm install --save-dev jest
+        4.2 Cambiar Test por el siguiente:
+                node --experimental-vm-modules ./node_modules/jest/bin/jest
+            Con este logramos hacer que Jest funcione con nuestros Tests
+    5. Creamos nuestra prueba y la hacemos fallar
+        NUNCA CONFIAR DE UNA PRUEBA QUE NO HA FALLADO
+    6.Creamos .gitignore para no versionar NodeModels:
+            Gitignore debe llevar:
+                **/node_modules
+                **//.DS_Store
+    7. Creamos el contenido requerido para el proyecto
+JavaScript
+    Importar
+        Para importar podemos hacer lo siguiente:
+        const Objeto = require(./../Carpeta_del_archivo)
+    Clases
+        Asi creamo una clase con sus modulos 
+        Class Object{
+            *Module*constructor(Modulo1,Modulo2,Modulo3)
+        }
+    new Date()
+        Nos da la hora del sistema opertativo y lo podemos 
+        utilizar como funcion para agregarlo a un objeto 
+        cuando queremos saber fechas y horas exactas
+    Getters:
+        Ayudan a accesar informacion especifica de un objeto 
+            get getObjeto() {
+                return this.username
+                           "this." hace referencia a las propiedades de dicho objeto    
+                }
+    Setters:
+        Actualizan la informacion de un objeto:
+            set setNuevoObject (NewObject){
+                this.Object = NewObject 
+                    }
+            Objeto.setNuevoObject = "New Value"
