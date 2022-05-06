@@ -1,6 +1,6 @@
 LIVE 2 - Semana 3
     GIT - GITHUB
-        Para aprender de Git - ProGit de la pagina de Git
+        **Para aprender más de Git - ProGit de la pagina de Git**
         Comandos para saber el estado, ubicacion, nuestros commits, mandar commits, etc:
             git status:
                 Para saber si estamos en un repo
@@ -14,9 +14,9 @@ LIVE 2 - Semana 3
                 Donde esta el repo
 
             git push origin master  
-            push (Push sirve para "Empujar" los cambios hacia nuestro repo)
-            origin (Cual es el origen de nuestro repo) 
-            master (Branch principal)
+                push (Push sirve para "Empujar" los cambios hacia nuestro repo)
+                origin (Cual es el origen de nuestro repo) 
+                master (Branch principal)
             Git pull            
                 Tanto el repo de Git como el de Github tienen que esta actulizado con lo cambios que hagamos
                 Para ello cuando hacemos cambios en Github podemos traerlos a nostros con:
@@ -91,11 +91,36 @@ LIVE 2 - Semana 3
                         }
                 Objeto.setNuevoObject = "New Value"
     TDD Tests
-    1. Sirve para obtener lo que queremos de nuestro codigo
-    2. SIEMPRE tener que correr la prueba y hacerla fallar
-    3. Exportar e importar el script para tener un orden en nuestro proyecto 
-    4. Pruebas para poder verificar que nuestro codigo funciona, sirve para mantener nuestro proyecto
+        1. Sirve para obtener lo que queremos de nuestro codigo
+        2. SIEMPRE tener que correr la prueba y hacerla fallar
+        3. Exportar e importar el script para tener un orden en nuestro proyecto 
+        4. Pruebas para poder verificar que nuestro codigo funciona, sirve para mantener nuestro proyecto
 
 LIVE 3 - Week 3
     Servers en Node Js
-        EndPoints
+        Express:
+            Definicion:
+                Dependencia o Framework de Java Script que nos
+                ayuda a crear sevidores, a pesar de que Js tiene
+                su forma de crear servidors, con Express es mas rapido 
+                aplicaciones de servidor
+
+            Usar Express en JavaScript:
+                1. Para agregar Express:
+                    npm install express --save
+                        Esto actulizara el package.json, ahora aparecera en nuestras dependencias
+                2. Mandamos a llamar la dependencia:
+                    const express = require('express')
+                3. La metemos a un objeto:
+                    const app = express()
+                4. Creamos un puerto:
+                    const port = 3000  
+                5. Creamos nuestra URL:
+                    app.get('/'(req, res (Parametros que son necesarios: Request(Alguien mandara un mensaje) y respond(Alguien respondera) ))) (Podemos colocar la URL que deseemos, al colocar '/' tomara como URL "Localhost:300"
+                             Un ejemplo seria si alguien entra a nuestro servidor, podemos mandarle una respuesta:
+                            res.send("Hola Viajero")
+                6. Incializar nuestro servidor:
+                    app.listen(port,() =>{    (Indicamos el puerto que queremos que abra)    
+                        console.log("Server is running)
+                    }
+                7. ¡ Server Creado ! *Primer aplicacion de BackEnd*       
