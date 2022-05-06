@@ -1,37 +1,52 @@
 GIT - GITHUB
+    Para aprender de Git - ProGit de la pagina de Git
     Comandos para saber el estado, ubicacion, nuestros commits, mandar commits, etc:
-        git status: Para saber si estamos en un repo
+        git status:
+             Para saber si estamos en un repo
 
-        git init: Creamos un repo de git
-        *Debemos agregar los commits seguid para tener un seguimiento de las versiones*
+        git init: 
+            Creamos un repo de git
+        *Debemos agregar los commits seguido para tener un seguimiento de las versiones*
+        git remote add:
+             Agregamos una URL de un repo de alguna plataforma asi "origin (URL)"
+        git remote -v:
+             Donde esta el repo
 
-
-
-        git remote add: Agregamos una URL de un repo de alguna plataforma asi "origin (URL)"
-        git remote -v: Donde esta el repo
-
-        git push (Push sirve para "Empujar" los cambios hacia nuestro repo) origin (Cual es el origen de nuestro repo) master (Branch principal)
         git push origin master  
-
-        Tanto el repo de Git como el de Github tienen que esta actulizado con lo cambios que hagamos
-        Para ello cuando hacemos cambios en Github podemos traerlos a nostros con:
-        Git pull "origin master"
+          push (Push sirve para "Empujar" los cambios hacia nuestro repo)
+          origin (Cual es el origen de nuestro repo) 
+          master (Branch principal)
+        Git pull            
+            Tanto el repo de Git como el de Github tienen que esta actulizado con lo cambios que hagamos
+            Para ello cuando hacemos cambios en Github podemos traerlos a nostros con:
+            Git pull "origin master"
 
         *Hay que entender como usar lo comandos de Git, no usar por usar"
 
-        *Avanzado* git push origin master --force: Mandamos los cambios de nuestro repo local sin importar los que haya en el global
+        ¡¡¡¡¡¡Git necesario para conocer nuestros pasos!!!!!!
 
+        *Avanzado* git push origin master --force: Mandamos los cambios de nuestro repo local sin importar los que haya en el global
 Creacion de un Proyecto en JS
     1. Para cualquier proyecto de Js - Versionarlo con Git
+        1.1 Agregar Repo remoto de GitHub - Agregamos la URL
+        CONOCER GIT - CONOCER LA TEORIA DETRAS DE LOS COMANDOS
+        1.2 Commits para conocer nuestro proceso
     2. Ejecutar npm init -npm init: nos crea el package.json
     3. Provicionar ambiente creando: 
-        Test
-            Models
-                User.test.js    
-        App
-            Models
-                User.js
+        Estructura del Proyecto: Permite una estructura simple 
+            Test
+                Services
+                Views
+                Models
+                    User.test.js    
+            App
+                Services
+                Views
+                Models
+                
+                    User.js
     4. Agregar Jest como dependencia para nuestros Test
+        Jest es una dependencia (Aquel proyecto que nos va ayudar pero no es de nuestro proyecto)
         4.1 Comando para instalar Jest:
                 npm install --save-dev jest
         4.2 Cambiar Test por el siguiente:
@@ -39,12 +54,17 @@ Creacion de un Proyecto en JS
             Con este logramos hacer que Jest funcione con nuestros Tests
     5. Creamos nuestra prueba y la hacemos fallar
         NUNCA CONFIAR DE UNA PRUEBA QUE NO HA FALLADO
-    6.Creamos .gitignore para no versionar NodeModels:
-            Gitignore debe llevar:
-                **/node_modules
-                **//.DS_Store
+        LAS PRUEBAS SON NECEASARIAS PARA CUALQUIER PROYECTO!!
+    6. Creamos .gitignore para no versionar NodeModels:
+        Gitignore debe llevar:
+            **/node_modules
+            **//.DS_Store
+        Contiene dependencias de tu proyecto pero no son parte de el, por ello no debemos versionarlo
+            
     7. Creamos el contenido requerido para el proyecto
+    8. Exportar e importar el script para tener un orden en nuestro proyecto
 JavaScript
+    Un codigo de Js no debe tener mas de 50 o más lineas para que sea muy sencillo
     Importar
         Para importar podemos hacer lo siguiente:
         const Objeto = require(./../Carpeta_del_archivo)
@@ -69,3 +89,9 @@ JavaScript
                 this.Object = NewObject 
                     }
             Objeto.setNuevoObject = "New Value"
+TDD Tests
+    1. Sirve para obtener lo que queremos de nuestro codigo
+    2. SIEMPRE tener que correr la prueba y hacerla fallar
+    3. Exportar e importar el script para tener un orden en nuestro proyecto 
+    4. Pruebas para poder verificar que nuestro codigo funciona, sirve para mantener nuestro proyecto
+
