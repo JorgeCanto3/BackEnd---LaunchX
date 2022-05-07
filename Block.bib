@@ -1,0 +1,254 @@
+LIVE 2 - Week 3
+    GIT - GITHUB
+        CONOCER GIT - CONOCER LA TEORIA DETRAS DE LOS COMANDOS
+        **Para aprender más de Git - ProGit de la pagina de Git**
+        Comandos para saber el estado, ubicacion, nuestros commits, mandar commits, etc:
+            git status:
+                Para saber si estamos en un repo
+
+            git init: 
+                Creamos un repo de git
+            *Debemos agregar los commits seguido para tener un seguimiento de las versiones*
+            git remote add:
+                Agregamos una URL de un repo de alguna plataforma asi "origin (URL)"
+            git remote -v:
+                Donde esta el repo
+
+            git push origin master  
+                push (Push sirve para "Empujar" los cambios hacia nuestro repo)
+                origin (Cual es el origen de nuestro repo) 
+                master (Branch principal)
+            Git pull            
+                Tanto el repo de Git como el de Github tienen que esta actulizado con lo cambios que hagamos
+                Para ello cuando hacemos cambios en Github podemos traerlos a nostros con:
+                Git pull "origin master"
+
+            *Hay que entender como usar lo comandos de Git, no usar por usar"
+
+            ¡¡¡¡¡¡Git necesario para conocer nuestros pasos!!!!!!
+
+            *Avanzado* git push origin master --force: Mandamos los cambios de nuestro repo local sin importar los que haya en el global
+    Creacion de un Proyecto en JS
+        1. Para cualquier proyecto de Js - Versionarlo con Git (Repo Local)
+            1.1 Agregar Repo remoto de GitHub - Agregamos la URL (Enzalarlo con GitHub)
+            1.2 Commits para conocer nuestro proceso
+        2. Ejecutar npm init -npm init: nos crea el package.json
+                JSON:
+                    Es un archivo de notación de objetos Js
+        3. Provicionar ambiente creando: 
+            Estructura del Proyecto: Permite una estructura simple 
+                Test
+                    Services
+                    Views
+                    Models
+                        User.test.js    
+                App
+                    Services
+                    Views
+                    Models
+                    
+                        User.js
+        4. Agregar Jest como dependencia para nuestros Test
+            Jest es una dependencia (Aquel proyecto que nos va ayudar pero no es de nuestro proyecto)
+            4.1 Comando para instalar Jest:
+                    npm install --save-dev jest
+            4.2 Cambiar Test por el siguiente:
+                    node --experimental-vm-modules ./node_modules/jest/bin/jest
+                Con este logramos hacer que Jest funcione con nuestros Tests
+        5. Creamos nuestra prueba y la hacemos fallar
+            NUNCA CONFIAR DE UNA PRUEBA QUE NO HA FALLADO
+            LAS PRUEBAS SON NECEASARIAS PARA CUALQUIER PROYECTO!!
+        6. Creamos .gitignore para no versionar NodeModels:
+            Gitignore debe llevar:
+                **/node_modules
+                **//.DS_Store
+            Contiene dependencias de tu proyecto pero no son parte de el, por ello no debemos versionarlo
+                
+        7. Creamos el contenido requerido para el proyecto
+        8. Exportar e importar el script para tener un orden en nuestro proyecto
+    JavaScript
+        Un codigo de Js no debe tener mas de 50 o más lineas para que sea muy sencillo
+        Importar
+            Para importar podemos hacer lo siguiente:
+            const Objeto = require(./../Carpeta_del_archivo)
+        Clases
+            Asi creamo una clase con sus modulos 
+            Class Object{
+                *Module*constructor(Modulo1,Modulo2,Modulo3)
+            }
+        new Date()
+            Nos da la hora del sistema opertativo y lo podemos 
+            utilizar como funcion para agregarlo a un objeto 
+            cuando queremos saber fechas y horas exactas
+        Getters:
+            Ayudan a accesar informacion especifica de un objeto 
+                get getObjeto() {
+                    return this.username
+                            "this." hace referencia a las propiedades de dicho objeto    
+                    }
+        Setters:
+            Actualizan la informacion de un objeto:
+                set setNuevoObject (NewObject){
+                    this.Object = NewObject 
+                        }
+                Objeto.setNuevoObject = "New Value"
+    TDD Tests
+        1. Sirve para obtener lo que queremos de nuestro codigo
+        2. SIEMPRE tener que correr la prueba y hacerla fallar
+        3. Exportar e importar el script para tener un orden en nuestro proyecto 
+        4. Pruebas para poder verificar que nuestro codigo funciona, sirve para mantener nuestro proyecto
+
+LIVE 3 - Week 3
+        Servers en Node Js
+            Express:
+                Definicion:
+                    Framework de Java Script que nos ayuda a crear sevidores,
+                    a pesar de que Js tiene su forma de crear servidors, con
+                    Express es mas rapido aplicaciones de servidor
+
+                    Nota: Muy rapido y sencillo
+
+                
+                Uso: 
+                    A nuestro servidor se conectara a clientes que vendran por cierta informacion, como los siguientes clientes:
+                        Apps Moviles
+                        Linea de comando
+                            Ej: 
+                                Curl sirve para hacer peticiones de informacion
+                                    curl localhost:3000/ExtraLaunchX 
+                    El server:
+                        Nos sirve a exponer la logica de nuestra aplicacion y podemos interconectarla
+                            La podemos exponer a clientes:
+                                • App web
+                                • App movil
+                                • Requestn (Curl)
+                                • Respond  
+                Usar Express en JavaScript:
+                    1. Para agregar Express:
+                        npm install express --save
+                            Esto actulizara el package.json, ahora aparecera en nuestras dependencias
+                    2. Mandamos a llamar la dependencia:
+                        const express = require('express')
+                    3. La metemos a un objeto:
+                        const app = express()
+                    4. Creamos un puerto:
+                        const port = 3000  
+                    5. Creamos nuestra URL:
+                        app.get('/'(req, res (Parametros que son necesarios: Request(Alguien mandara un mensaje) y respond(Alguien respondera) )))
+                        (Podemos colocar la URL que deseemos, al colocar '/' tomara como URL "Localhost:300"
+                                Un ejemplo seria si alguien entra a nuestro servidor, podemos mandarle una respuesta:
+                                res.send("Hola Viajero")
+                    6. Incializar nuestro servidor:
+                        app.listen(port,() =>{    (Indicamos el puerto que queremos que abra)    
+                            console.log("Server is running)
+                        }
+                    7. Ejecuta tu server con:
+                        node app.js o F5 en VisualStudio Code
+                            Sera: Localhost:300
+                    8. ¡ Server Creado ! *Primer aplicacion de BackEnd*       
+                    Modificacion de express
+                        1. Agregamos una route adicional a nuestro servidor
+                        app.get('/LaunchX',(req,res)=>{]) Agregamos una URL a nuestro servidor
+                            **Nota: Si no exite la URL no nos llevara a ningun lado y nos dara error
+                        2. Route adicional con un objeto y propiedades:
+                            app.get('/ExtarLaunchX',(req,res)=>{
+                            const Adicional = { id:2 name:"Que tranza manolo"}
+                            res.send(Adicional)
+                            })
+                        3. Query patterns:
+                            Nos mandara un parametro con la URL
+                                app.get('/ExtarLaunchX/:explorer',(req,res)=>{
+                                console.log("Exitoso")
+                                res.send(req.params) el objeto de la URL se guarda en Req.params y se ve de la siguiente forma {explorer:
+                                (de la URL y se guarda en req) 'Jorge' (Se guarda en params y tambien se encuentra en la URL despues de explorer)
+                                })
+                Routes:
+                    URLS que van a estar habilitadas. (/launchx, /ExtraLaunchX)
+                            Estas se habilitan de manera manual donde esta el server express
+                    Un URL o route nos puede regresar lo siguiente:
+                        • Texto
+                        • Objetos
+                        • Lista de objetos
+                        • Etc.
+                Methods HTTP: (Express contiene las convenciones listas para usar)
+                    HTTP:
+                        Nos ayuda a tener una forma estandar para crear Endpoints y consumirlos
+                            Convencion Web, para clientes que quieren usar nuestro API
+                                La convecion necesaria para entender como modelar nuestro servidort
+                                Protocolo HTTP:
+                                    su comunicacion es mediante http
+                                        El cliente viene directamnete al servidor, o bien un request, 
+                                            PuedeN ser Endpoints como (Get,Post,Put,Delete). A su vez
+                                            podemos consumir info de un un server con los mismos request 
+                                        Se emite una respuesta de acuerdo al req
+
+                    ENDPOINT
+                        GET, POST, PUT, DELETE
+                            Get (Regresar):    
+                                Uso:
+                                    Regresamos informacion con este codigo
+                                        Ej. 
+                                        app.get('v1/explorers/:id,(req,res) =>{
+                                            console.log(Get con Id y explorers, fecha y hora con: ${new Date()})
+                                            const explorer1 = {id:1, name: "Xplorer1"}
+                                            Regresamos los datos con 
+                                            req.status((Code Status)200).json(explorer(El objeto))
+                                Code Status:
+                                    Indicamos al usuario si fue exitosa su consulta en Get
+                                         res.status(200(numero para una operacion exitosa)).json(explorers) 
+                            Post (Crear (Persistir Info o bien guardar en base de datos): 
+                                Uso: 
+                                    Un request con el metodo post es para crear un nuevo modelo
+                                Parametros del Request para crear un nuevo modelo:
+                                        console.log(req.body)
+                                                Parametros que pueden venir en un formulario
+                                            Aqui podemos guardar datos como los de un formulario  y regresar la info  
+                                Code Status:
+                                    Indicamos al usuario si fue exitosa su consulta en Post
+                                        Res.status(201(Codigo de creacion de nueva identidad)).json({message: "Todo chido, bro"]) 
+                            Put (Actualizar):
+                                Uso: 
+                                    Con Put podemos Actualizar un registro
+                                Parametros:
+                                    Put, requiere de un parametro para actualizar, seria en este ejemplo, ID
+                                     app.get('v1/explorers/:id),(req,res) =>{
+                                            console.log(Put)
+                                            //Parametros que queremos actualizar
+                                            console.log(req.body)
+                                            //Query Params
+                                            console.loh(req.params.id)
+                                            Regresamos los datos con 
+                                            req.status(200).json({message: "Actualizado,Todo chido, bro"})
+                                Code Status:
+                                    Indicamos al usuar  io si fue exitosa su consulta en Put
+                                        Res.status(200(Codigo de creacion de nueva identidad)).json({message: "Actualizado,Todo chido, bro"])
+                            Delete (Eliminar):
+                                Uso: 
+                                    Podemos eliminar algo de nuestro codigo 
+                                    app.get('v1/explorers/:id),(req,res) =>{
+                                            console.log(Delete)
+                                            -Logica para eliminar el registro                                        
+                                            req.status(200).json({message: "Eliminado,Todo chido, bro"})
+                                Code Status:
+                                    Indicamos al usuar  io si fue exitosa su consulta en Put
+                                        Res.status(200(Codigo de creacion de nueva identidad)).json({message: "Eliminado,Todo chido, bro"])
+
+            API - Aplication programming interface
+             Es la aplicacion del servidor
+             Nos permite exponer la informacion del servidor y 
+             podemos interconectar a otras aplicaciones 
+            PostMan: 
+                App para poder probar End points  
+                    Es un cliente que hace request a nuestro servidor para testearlo
+                Otras opciones:
+                    HTTPIE
+                    CURL 
+        Forma de trabajo estructurada 
+            Commits
+                1. Creamos estructura del proyecto
+                    Carpetas necesarias para el desarrlo como: App,Test,etc.
+                        1.1 Hacemos los pasos de Java Script: npm init, gitIgnore,etc.
+                2. Agregamos las dependencias necesarias: Jest, express, etc.
+                3. Modificamos las partes necesarias de package.json como podria ser la parte de Jest para las Tests
+                4. Creamos Una clase vacia
+LIVE 1 - Week 4
