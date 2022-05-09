@@ -1,5 +1,5 @@
 const Reader = require("./../utils/Reader");
-const explorers = Reader.readJsonFile("./../../explorers.json");
+const explorers = Reader.readJsonFile("./explorers.json");
 
 class ExplorerServices { 
     static filterByMission(explorers, mission) {
